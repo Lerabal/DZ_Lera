@@ -3,20 +3,27 @@
 //3, 5 -> 243 (3⁵)
 
 Console.Clear();
-void Stepen()
+int getUserData(string message)
 {
-    Console.Write("Введите число1: ");
-    int num1 = int.Parse(Console.ReadLine()!);
-    Console.Write("Введите число2: ");
-    int num2 = int.Parse(Console.ReadLine()!);
+    Console.WriteLine(message);
+    int userData = int.Parse(Console.ReadLine()!);
+    return userData;
+}
+
+int userData = getUserData("Введите число 1: ");
+int userData1 = getUserData("Введите число 2: ");
+
+int stepen(int userData, int userData1)
+{
     int count = 1;
-    int result = num1;
-    while (count < num2)
+    int result = userData;
+    while (count < userData1)
     {
-        result = result * num1;
+        result = result * userData;
         count++;
     }
-    Console.WriteLine($"{num1} в {num2} степени = {result}");
+    return result;
 }
-Stepen();
 
+int end = stepen(userData, userData1);
+Console.WriteLine($"{userData} в {userData1} степени = {end}");
