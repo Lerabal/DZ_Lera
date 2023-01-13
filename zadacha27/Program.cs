@@ -3,12 +3,25 @@
 //452 -> 11
 
 Console.Clear();
-Console.Write ("Введите число: ");
-int num = int.Parse(Console.ReadLine()!);
-int sum = 0;
-while (num > 0)
+int getUserData(string message)
 {
-    sum = sum + num % 10;
-    num = num / 10;
+    Console.WriteLine(message);
+    int userData = int.Parse(Console.ReadLine()!);
+    return userData;
 }
-Console.WriteLine($"Сумма цифр = {sum}");
+
+int getSum(int userData)
+{
+    int sum = 0;
+    while (userData > 0)
+    {
+        sum = sum + userData % 10;
+        userData = userData / 10;
+    }
+    return sum;
+}
+
+
+int userData = getUserData("Введите число: ");
+int result = getSum(userData);
+Console.WriteLine($"Сумма цифр {userData} = {result}");
