@@ -27,3 +27,5 @@ void ShowArray(int[] array)
 }
 int[] array = GetArrayRandom(8);
 ShowArray(array);
+
+//void stringMassage (int[] array)
