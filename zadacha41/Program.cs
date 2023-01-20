@@ -2,7 +2,7 @@
 
 0, 7, 8, -2, -2 -> 2
 
-1, -7, 567, 89, 223-> 3*/
+1, -7, 567, 89, 223-> 4*/
 
 
 int getUserData(string message)
@@ -12,16 +12,18 @@ int getUserData(string message)
     return userData;
 }
 
-int size = 5;               
-int count = 0;
-
-while (size > 0)
+int getCount(int size)
 {
-    int num1 = getUserData("Введите число");
-    
-   
-    if (num1 > 0) count++;
-    size--;
-}
+    int count = 0;
 
-Console.WriteLine($"Количество чисел больше 0: {count}");
+    while (size > 0)
+    {
+        int num1 = getUserData("Введите число");
+        if (num1 > 0) count++;
+        size--;
+    }
+
+    return count;
+}
+ int step=getCount(5);
+Console.WriteLine($"Количество чисел больше 0 = {step}");
