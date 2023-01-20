@@ -23,10 +23,13 @@ int b = getUserData("Введите длину стороны B");
 int c = getUserData("Введите длину стороны C");
 bool isExist = IsTriangleExist(a, b, c);
 
-Console.WriteLine($"Треугольник со сторонами [{a}, {b}, {c}] {((isExist)?"существует":"не существует")}");
+Console.WriteLine($"Треугольник со сторонами [{a}, {b}, {c}] {((isExist) ? "существует" : "не существует")}");
 
 /*
 string str;
 if (isExist)
 {str = "Существует";}
-else {str = "неСуществует";}*/
+else {str = "неСуществует";}
+
+int str = (isExist)?4+a:5-b)
+*/
