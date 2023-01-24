@@ -34,7 +34,7 @@ void PrintArr(int[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            Console.Write(matr[i, j] + "  ");
+            Console.Write(matr[i, j] + " \t ");
         }
         Console.WriteLine();
     }
@@ -52,7 +52,7 @@ double[] Sum(int[,] array)
             result[j] = sum / array.GetLength(1);
             
         }
-        Console.Write($"{result[j]} |  ");
+        Console.Write($"{result[j]+ " \t"}");
 
     }
     return result;
@@ -63,6 +63,7 @@ int rowLength = GetDataFromUser("Введите количество столб�
 Console.WriteLine();
 int[,] arr = AddArray(colLength, rowLength, 2, 10);
 PrintArr(arr);
+Console.WriteLine();
 double[] sum = Sum(arr);
 
 
