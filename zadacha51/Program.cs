@@ -73,23 +73,6 @@ int FindSum(int[,] array)
     return result;
 }
 
-void Change(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i % 2 == 0 && j % 2 == 0)
-            {
-                array[i, j] = (int)Math.Pow(array[i, j], 2);
-            }
-        }
-    }
-    return;
-}
-
-
-
 int colLength = GetDataFromUser("Введите количество строк ");
 int rowLength = GetDataFromUser("Введите количество столбцов");
 int[,] array = AddArray(colLength, rowLength, 0, 10);
